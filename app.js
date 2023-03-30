@@ -1,14 +1,14 @@
 const express= require('express');
 const bodyParser=require('body-parser')
 const cors=require('cors')
-
+const favicon = require('express-favicon');
 const mongoose=require('./db.js')
 const app=express()
 const router=require('../backend/routes.js');
 const route = require('../backend/routes.js');
 
 const path =require('path')
-
+app.use(favicon(__dirname + '/frontend/assets/images/logo.png'));
 app.use(express.static(path.join(__dirname,"frontend")));
 app.get((req,res)=>{
     res.sendFile(path.join(__dirname,"frontend/index.html"));
