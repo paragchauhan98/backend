@@ -8,12 +8,12 @@ const router=require('../backend/routes.js');
 const route = require('../backend/routes.js');
 
 const path =require('path')
-app.use(favicon(__dirname + '/frontend/assets/images/logo.png'));
+
 app.use(express.static(path.join(__dirname,"frontend")));
 app.get((req,res)=>{
     res.sendFile(path.join(__dirname,"frontend/index.html"));
 })
-
+app.use(favicon(__dirname + '/frontend/favicon.ico'));
 app.use(bodyParser.json())
 app.use(cors());
 const PORT=process.env.PORT || 3000
