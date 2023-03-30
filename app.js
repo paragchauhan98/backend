@@ -16,7 +16,7 @@ app.get((req,res)=>{
 
 app.use(bodyParser.json())
 app.use(cors());
-const PORT=process.env.PORT || 3000
+const PORT=process.env.PORT || 3000 || 8080
 
 app.listen(PORT,()=>{
     console.log('server has started on 3000')
