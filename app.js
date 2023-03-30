@@ -1,7 +1,7 @@
 const express= require('express');
 const bodyParser=require('body-parser')
 const cors=require('cors')
-const favicon = require('express-favicon');
+const favicon = require('serve-favicon')
 const mongoose=require('./db.js')
 const app=express()
 const router=require('../backend/routes.js');
@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname,"frontend")));
 app.get((req,res)=>{
     res.sendFile(path.join(__dirname,"frontend/index.html"));
 })
-app.use(favicon(__dirname + '/frontend/favicon.ico'));
+app.use(favicon(path.join(__dirname, 'frontend', 'favicon.ico')))
 app.use(bodyParser.json())
 app.use(cors());
 const PORT=process.env.PORT || 3000 || 8080
