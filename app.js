@@ -11,7 +11,7 @@ const path =require('path')
 
 app.use(express.static(path.join(__dirname,"frontend")));
 
-app.use(favicon(path.join(__dirname, 'frontend', 'favicon.ico')))
+
 app.use(bodyParser.json())
 app.use(cors());
 const PORT=process.env.PORT || 3000 || 8080
