@@ -13,7 +13,9 @@ app.use(express.static(path.join(__dirname,"frontend")));
 app.get((req,res)=>{
     res.sendFile(path.join(__dirname,"frontend/index.html"));
 })
-app.get(favicon(path.join(__dirname, 'frontend', 'favicon.ico')))
+app.get((req,res)=>{
+res.sendFile((favicon(path.join(__dirname, 'frontend', 'favicon.ico'))))
+})
 app.use(bodyParser.json())
 app.use(cors());
 const PORT=process.env.PORT || 3000 || 8080
