@@ -10,16 +10,14 @@ const route = require('../backend/routes.js');
 const path =require('path')
 
 app.use(express.static(path.join(__dirname,"frontend")));
-app.get((req,res)=>{
-    res.sendFile(path.join(__dirname,"frontend/index.html"));
-})
-app.get((req,res)=>{
-res.sendFile((favicon(path.join(__dirname, 'frontend', 'favicon.ico'))))
-})
+app.use(favicon(__dirname + '/frontend/favicon.ico'));
+
 app.use(bodyParser.json())
 app.use(cors());
 const PORT=process.env.PORT || 3000 || 8080
-
+app.get((req,res)=>{
+    res.sendFile((favicon(path.join(__dirname, 'frontend', 'favicon.ico'))))
+    })
 app.listen(PORT,()=>{
     console.log('server has started on 3000')
 })
