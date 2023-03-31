@@ -3,9 +3,9 @@ const req=require('express/lib/request')
 const router=express.Router()
 
 const mongoType=require('mongoose').Types;
-const contact=require('../backend/model/contact.js')
+const contact=require('./model/contact.js')
 
-const post=require('../backend/model/post.js')
+const post=require('./model/post.js')
 
 //define routes here
 

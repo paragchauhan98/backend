@@ -4,8 +4,8 @@ const cors=require('cors')
 const favicon = require('serve-favicon')
 const mongoose=require('./db.js')
 const app=express()
-const router=require('../backend/routes.js');
-const route = require('../backend/routes.js');
+const router=require('./routes.js');
+const route = require('./routes.js');
 
 const path =require('path')
 
