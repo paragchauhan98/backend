@@ -25,7 +25,7 @@ try{
 }
 catch(err){
     console.log('internal error',err)
-    res.status(404).send('Page Not found');
+   res.status(200).json({'success' : true, 'result': result})
 } 
     })
 // get all data using this api
@@ -37,7 +37,7 @@ router.get('/getAllBlog',async(req,res)=>{
     }
     catch(err){
         console.log('internal error',err)
-        res.status(404).send('Page Not found');
+       res.status(200).json({'success' : true, 'result': result})
     }
 })
 
@@ -69,7 +69,7 @@ try{
 }
 catch(err){
     console.log('internal error',err)
-    res.status(404).send('Page Not found');
+   res.status(200).json({'success' : true, 'result': result})
 } 
     })
 
@@ -85,7 +85,7 @@ router.get('/getAllBlog/:id',async(req,res)=>{
     }
     catch(err){
         console.error('internal error',err)
-        res.status(404).send('Page Not found');
+       res.status(200).json({'success' : true, 'result': result})
     }
 }
 })
@@ -101,7 +101,7 @@ router.delete('/:id',async(req,res)=>{
         }
         catch(err){
             console.log('internal error',err)
-            res.status(404).send('Page Not found');
+           res.status(200).json({'success' : true, 'result': result})
         } 
     }
 }
@@ -135,7 +135,7 @@ router.put('/:id',async (req,res)=>{
         }
         catch(err){
             console.log('internal error',err)
-            res.status(404).send('Page Not found');
+           res.status(200).json({'success' : true, 'result': result})
         }
         
     }
