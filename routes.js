@@ -25,7 +25,7 @@ try{
 }
 catch(err){
     console.log('internal error',err)
-    res.status(400).send('internal error',err)
+    res.status(404).send('Page Not found');
 } 
     })
 // get all data using this api
@@ -37,7 +37,7 @@ router.get('/getAllBlog',async(req,res)=>{
     }
     catch(err){
         console.log('internal error',err)
-        res.status(400).send('internal errror',err)
+        res.status(404).send('Page Not found');
     }
 })
 
@@ -69,7 +69,7 @@ try{
 }
 catch(err){
     console.log('internal error',err)
-    res.status(400).send('internal error',err)
+    res.status(404).send('Page Not found');
 } 
     })
 
@@ -85,7 +85,7 @@ router.get('/getAllBlog/:id',async(req,res)=>{
     }
     catch(err){
         console.error('internal error',err)
-        res.status(400).send('internal error',err)
+        res.status(404).send('Page Not found');
     }
 }
 })
@@ -101,7 +101,7 @@ router.delete('/:id',async(req,res)=>{
         }
         catch(err){
             console.log('internal error',err)
-            res.status(400).send('internal error',err)
+            res.status(404).send('Page Not found');
         } 
     }
 }
@@ -135,7 +135,7 @@ router.put('/:id',async (req,res)=>{
         }
         catch(err){
             console.log('internal error',err)
-            res.status(400).send('internal error',err)
+            res.status(404).send('Page Not found');
         }
         
     }
