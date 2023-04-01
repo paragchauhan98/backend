@@ -19,10 +19,10 @@ app.get((req,res)=>{
     res.sendFile(path.join(__dirname,"frontend/index.html"));
 })
 app.listen(PORT,()=>{
-    console.log('server has started on 3000')
+    console.log('server has started on', PORT)
 })
 
 
 
-app.use('',route)
+app.use('/',route)
 app.use('/',route)
