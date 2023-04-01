@@ -24,5 +24,5 @@ app.listen(PORT,()=>{
 
 
 
-app.use('',route)
+app.use('/',route)
 app.use('/',route)
